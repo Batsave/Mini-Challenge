@@ -1,7 +1,15 @@
+//Librairies
 import navbardata from "../data/linknavbar.json";
+import { NavLink as Link } from "react-router-dom";
+
+//Composants
+import Burger from "./Burger.jsx";
+
+// Styles
 import "../scss/navbar.scss";
 import "../scss/root.scss";
-import Burger from "./Burger.jsx";
+
+
 
 export default function Navbar({ cart, count }) {
 
@@ -20,7 +28,7 @@ export default function Navbar({ cart, count }) {
         </ul>
         <div className="cart-section">
         <p className="cart-price">{cart.toFixed(2)} € ({count})</p>
-          <div className="cart"></div>
+          <Link to="/cart" className="cart" ></Link>
           
         </div>
       

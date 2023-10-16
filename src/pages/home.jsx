@@ -30,14 +30,14 @@ export default function Home({updateCart, cart}) {
           name="description"
           content="Découvrez notre Nouvelle Collection"
         />
-        <meta name="robots" content="noindex, follow" />
+        <meta name="robots" content="index, follow" />
         <meta
           name="googlebot"
-          content="noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
         />
         <meta
           name="bingbot"
-          content="noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
         />
         <link rel="canonical" href="https://www.pepinesque.com/" />
         <meta property="og:url" content="https://www.pepinesque.com" />
