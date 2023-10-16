@@ -2,7 +2,7 @@ import navbardata from "../data/linknavbar.json";
 import "../scss/navbar.scss";
 import "../scss/root.scss";
 
-export default function Burger() {
+export default function Burger({ cart }) {
     return (
       <nav className="menuToggle">
        
@@ -10,6 +10,7 @@ export default function Burger() {
           <span></span>
           <span></span>
           <span></span>
+          
           <ul className="menu">
           {navbardata.map((navdataIndex) => {
             return (
@@ -20,7 +21,7 @@ export default function Burger() {
             );
           })}
         </ul>
-      
+        
       </nav>
   
     );

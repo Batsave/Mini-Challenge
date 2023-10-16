@@ -1,9 +1,12 @@
 import "../scss/productcard.scss";
 
-export default function ProductCard({ data }) {
+export default function ProductCard({ data, updateCart}) {
   const imgsrc = {
     backgroundImage: `url(${data.img})`,
   };
+
+
+
 
   return (
     <div>
@@ -17,8 +20,9 @@ export default function ProductCard({ data }) {
               <p className="id">#{data.id}</p>
             </div>
             <p className="description">{data.description}</p>
-            <p className="price">{data.price} €</p>
+            <p className="price">{data.price.toFixed(2)} €</p>
           </div>
+          <button onClick={() => updateCart(data.price)}>Ajouter</button>
         </div>
       </div>
     </div>

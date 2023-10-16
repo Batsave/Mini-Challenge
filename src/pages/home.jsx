@@ -8,7 +8,10 @@ import ProductCard from "../components/ProductCard.jsx";
 //Data
 import Data from "../data/data.json";
 
-export default function Home() {
+export default function Home({updateCart, cart}) {
+
+
+
   const [selectedOption, setSelectedOption] = useState("");
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -16,6 +19,7 @@ export default function Home() {
   const filteredData = selectedOption
     ? Data.filter((product) => product.category === selectedOption)
     : Data;
+
 
   return (
     <div>
@@ -133,7 +137,7 @@ export default function Home() {
         </div>
         <div className="results">
           {filteredData.map((product) => (
-            <ProductCard key={product.id} data={product} />
+            <ProductCard key={product.id} data={product} updateCart={updateCart} cart={cart} />
           ))}
         </div>
       </div>
