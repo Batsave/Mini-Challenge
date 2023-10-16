@@ -1,152 +1,182 @@
-
 .header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eaeaeaaa;
+
+  .bg-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+
+  .head-bloc {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    background-color: #eaeaeaaa;
-  
-    .bg-video {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      position: fixed;
-      top: 0;
-      z-index: -1;
-    }
-
-
-    .head-bloc {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 2rem;
-      width: fit-content;
-
-      @media screen and (max-width: 768px) {
-        padding: 0 0rem;
-        text-align: center;
-        align-items: center;
-      }
-        
-      .social-button {
-        display: flex;
-        width: fit-content;
-        padding: 0.4rem 2rem;
-        border-radius: 1rem;
-        background-color: var(--color-black);
-        font-family: var(--font);
-        font-size: 0.9rem;
-        text-align: center;
-        color: var(--color-white);
-        transition: transform 0.15s ease-in-out;
-  
-        &:hover {
-          transform: scale(0.95);
-          background-color: var(--color-black);
-        }
-      }
-      .title {
-        font-family: var(--font);
-        color: var(--color-black);
-        font-weight: 900;
-        font-size: 3rem;
-        
-        
-      }
-      .subtitle {
-        font-family: var(--font);
-        color: var(--color-black);
-        font-weight: 300;
-        font-size: 1.5rem;
-        
-        max-width: 45ch;
-      }
-      
-    }
-  }
-  
-  .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    gap: 1rem;
     padding: 2rem;
-    background-color: var(--color-white-hover);
-  
-    .about-container {
-      display: flex;
-      flex-direction: row-reverse;
-     
+    width: fit-content;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 0rem;
+      text-align: center;
       align-items: center;
+    }
 
-      gap: 4rem;
-  
-      @media screen and (max-width: 900px) {
-        flex-direction: column;
-      
-      }
+    .social-button {
+      display: flex;
+      width: fit-content;
+      padding: 0.4rem 2rem;
+      border-radius: 1rem;
+      background-color: var(--color-black);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      text-align: center;
+      color: var(--color-white);
+      transition: transform 0.15s ease-in-out;
 
-      .content {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem;
-
-       
-
-      }
-      .about-ancre {
-        font-family: var(--font);
-        font-weight: 600;
-        font-size: 1em;
-        
-        color: var(--color-black);
-      }
-  
-      .title {
-        font-family: var(--font);
-        color: var(--color-black);
-        font-weight: 900;
-        font-size: 3rem;
-        
-      }
-      .paragraphe {
-        max-width: 100ch;
-        font-family: var(--font);
-        color: var(--color-black);
-        font-weight: 300;
-        font-size: 1.2rem;
-        line-height: 1.4;
-        
+      &:hover {
+        transform: scale(0.95);
+        background-color: var(--color-black);
       }
     }
-    .img-about {
-      display: flex;
-      min-width: 260px;
-      width: 100%;
-      height: 500px;
-      justify-content: center;
-      border-radius: 0.4rem;
-      background-image: url(./webp/about-picture.webp);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+    .title {
+      font-family: var(--font);
+      color: var(--color-black);
+      font-weight: 900;
+      font-size: 3rem;
+    }
+    .subtitle {
+      font-family: var(--font);
+      color: var(--color-black);
+      font-weight: 300;
+      font-size: 1.5rem;
+
+      max-width: 45ch;
     }
   }
-  
+}
 
-  .allproducts {
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--color-white-hover);
+
+  .about-container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    align-items: center;
+
+    gap: 4rem;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+    }
+    .about-ancre {
+      font-family: var(--font);
+      font-weight: 600;
+      font-size: 1em;
+
+      color: var(--color-black);
+    }
+
+    .title {
+      font-family: var(--font);
+      color: var(--color-black);
+      font-weight: 900;
+      font-size: 3rem;
+    }
+    .paragraphe {
+      max-width: 100ch;
+      font-family: var(--font);
+      color: var(--color-black);
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+  }
+  .img-about {
+    display: flex;
+    min-width: 260px;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    border-radius: 0.4rem;
+    background-image: url(./webp/about-picture.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.allproducts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem;
+  gap: 2rem;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+
+  @media screen and (max-width: 900px) {
+    padding: 2rem 0.5rem;
+  }
+
+  .options {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    min-height: 100vh;
-    padding: 5rem;
-    gap: 2rem;
-    box-sizing: border-box;
-    justify-content: center;
-    background-color: var(--color-white);
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      justify-content: center;
+    }
 
+    .title {
+      font-family: var(--font);
+      color: var(--color-black);
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
   }
+  .filter {
+    display: flex;
+    background-color: var(--color-white);
+    padding: 0.5rem 1rem;
+    font-family: var(--font);
+    color: var(--color-black);
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: solid 1px var(--color-black);
+    outline: none;
+  }
+
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+}

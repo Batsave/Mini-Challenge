@@ -8,18 +8,14 @@ import ProductCard from "../components/ProductCard.jsx";
 //Data
 import Data from "../data/data.json";
 
-
-
 export default function Home() {
-
   const [selectedOption, setSelectedOption] = useState("");
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
-  const filteredData = selectedOption 
+  const filteredData = selectedOption
     ? Data.filter((product) => product.category === selectedOption)
     : Data;
-
 
   return (
     <div>
@@ -66,8 +62,15 @@ export default function Home() {
         <title>Pepinesque | Mini-Projet</title>
       </Helmet>
 
-      <header className="header-container">
-      <video className="bg-video" autoPlay={true} loop={true} controls={false} playsInline muted  >
+      <header id="home" className="header-container">
+        <video
+          className="bg-video"
+          autoPlay={true}
+          loop={true}
+          controls={false}
+          playsInline
+          muted
+        >
           <source src="./publicité-pepinesque-min.mp4" type="video/mp4" />
         </video>
         <div className="head-bloc">
@@ -83,7 +86,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="about">
+      <div id="about" className="about">
         <div className="about-container">
           <div className="content">
             <div>
@@ -106,28 +109,34 @@ export default function Home() {
             </p>
           </div>
           <div className="content">
-            <div className="img-about" ></div>
+            <div className="img-about"></div>
           </div>
         </div>
       </div>
 
-      <div className="allproducts">
-        <div className="filter">
-          <select value={selectedOption} onChange={handleOptionChange}>
-          <option value="">Tous les produits</option>
-          <option value="Sweat">Sweat</option>
-          <option value="T-Shirt">T-Shirt</option>
-  </select>
+      <div id="products" className="allproducts">
+        <div className="options">
+          {selectedOption === "" ? (
+            <p className="title">Tous nos Produits</p>
+          ) : (
+            <p className="title">Tous nos {selectedOption}</p>
+          )}
+          <select
+            className="filter"
+            value={selectedOption}
+            onChange={handleOptionChange}
+          >
+            <option value="">Tous les produits</option>
+            <option value="Sweat">Sweat</option>
+            <option value="T-Shirt">T-Shirt</option>
+          </select>
         </div>
-
-        {filteredData.map((product) => (
-          <ProductCard key={product.id} data={product} />
-        ))}
-
+        <div className="results">
+          {filteredData.map((product) => (
+            <ProductCard key={product.id} data={product} />
+          ))}
         </div>
-
-
-
+      </div>
     </div>
   );
 }
