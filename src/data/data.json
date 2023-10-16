@@ -1,0 +1,35 @@
+[
+    {
+        "id": "PRD001",
+        "name": "Sweat Arres beige",
+        "description": "Avec notre sweat Arres, passez l'hiver au chaud ! 100% Coton",
+        "price": 49.80,
+        "img": "./webp/01.webp",
+        "category": "sweat"
+    },
+    {
+        "id": "PRD002",
+        "name": "Sweat Illinium Bordeau",
+        "description": "Partez en soirée avec notre sweat Illinium ! 100% Coton",
+        "price": 27.90,
+        "img": "./webp/02.webp",
+        "category": "sweat"
+    },
+    {
+        "id": "PRD003",
+        "name": "Sweat Provocation Rouge",
+        "description": "Défiez vos limites avec le sweat Provocation ! 20% Polyester, 80% Coton",
+        "price": 24.90,
+        "img": "./webp/03.webp",
+        "category": "sweat"
+    },
+    {
+        "id": "PRD004",
+        "name": "T-Shirt United Blanc",
+        "description": "Unnissons-nous avec notre collection United ! 20% Polyester, 80% Coton",
+        "price": 24.90,
+        "img": "./webp/04.webp",
+        "category": "T-Shirt"
+    }
+
+]

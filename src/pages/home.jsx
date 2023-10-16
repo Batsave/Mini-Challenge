@@ -4,8 +4,10 @@ import { Helmet } from "react-helmet";
 import "../scss/home.scss";
 
 //Composants
-
+import ProductCard from "../components/ProductCard.jsx";
 //Data
+import Data from "../data/data.json";
+
 
 export default function Home() {
   return (
@@ -97,6 +99,18 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="allproducts">
+
+        {Data.map((dataIndex) => {
+          <ProductCard key={dataIndex.id} data={dataIndex} />
+
+        })}
+
+        </div>
+
+
+
     </div>
   );
 }
