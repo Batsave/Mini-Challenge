@@ -2,7 +2,7 @@ import navbardata from "../data/linknavbar.json";
 import "../scss/navbar.scss";
 import "../scss/root.scss";
 
-export default function Burger({ cart }) {
+export default function Burger() {
     return (
       <nav className="menuToggle">
        

@@ -7,13 +7,14 @@ import { useState } from 'react'
 
 function App() {
 
+  let [count, setcount] = useState(0)
   let [cart, setCart] = useState(0)
-const updateCart = (price)=>(setCart(cart+=price))
+const updateCart = (price)=>(setCart(cart+=price) & setcount(count+=1))
 
 
   return (
     <>
-     <NavBar cart={cart} />
+     <NavBar cart={cart} count={count}/>
      <Home updateCart={updateCart} cart={cart}/>
      <Footer />
     </>

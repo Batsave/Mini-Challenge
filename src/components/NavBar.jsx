@@ -3,7 +3,7 @@ import "../scss/navbar.scss";
 import "../scss/root.scss";
 import Burger from "./Burger.jsx";
 
-export default function Navbar({ cart }) {
+export default function Navbar({ cart, count }) {
 
   return (
     <nav className="navbar">
@@ -19,7 +19,7 @@ export default function Navbar({ cart }) {
           })}
         </ul>
         <div className="cart-section">
-        <p className="cart-price">{cart.toFixed(2)} €</p>
+        <p className="cart-price">{cart.toFixed(2)} € ({count})</p>
           <div className="cart"></div>
           
         </div>
