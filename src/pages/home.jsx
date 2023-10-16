@@ -2,14 +2,25 @@ import { Helmet } from "react-helmet";
 
 //Styles
 import "../scss/home.scss";
-
+import { useState } from "react";
 //Composants
 import ProductCard from "../components/ProductCard.jsx";
 //Data
 import Data from "../data/data.json";
 
 
+
 export default function Home() {
+
+  const [selectedOption, setSelectedOption] = useState("");
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+  const filteredData = selectedOption 
+    ? Data.filter((product) => product.category === selectedOption)
+    : Data;
+
+
   return (
     <div>
       <Helmet>
@@ -101,11 +112,17 @@ export default function Home() {
       </div>
 
       <div className="allproducts">
+        <div className="filter">
+          <select value={selectedOption} onChange={handleOptionChange}>
+          <option value="">Tous les produits</option>
+          <option value="Sweat">Sweat</option>
+          <option value="T-Shirt">T-Shirt</option>
+  </select>
+        </div>
 
-        {Data.map((dataIndex) => {
-          <ProductCard key={dataIndex.id} data={dataIndex} />
-
-        })}
+        {filteredData.map((product) => (
+          <ProductCard key={product.id} data={product} />
+        ))}
 
         </div>
 

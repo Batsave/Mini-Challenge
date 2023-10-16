@@ -1,34 +1,50 @@
 [
     {
         "id": "PRD001",
-        "name": "Sweat Arres beige",
+        "name": "Sweat Arres White",
         "description": "Avec notre sweat Arres, passez l'hiver au chaud ! 100% Coton",
-        "price": 49.80,
-        "img": "./webp/01.webp",
-        "category": "sweat"
+        "price": "49.80",
+        "img": "./webp/09.webp",
+        "category": "Sweat"
     },
     {
         "id": "PRD002",
         "name": "Sweat Illinium Bordeau",
         "description": "Partez en soirée avec notre sweat Illinium ! 100% Coton",
-        "price": 27.90,
+        "price": "27.90",
         "img": "./webp/02.webp",
-        "category": "sweat"
+        "category": "Sweat"
     },
     {
         "id": "PRD003",
         "name": "Sweat Provocation Rouge",
         "description": "Défiez vos limites avec le sweat Provocation ! 20% Polyester, 80% Coton",
-        "price": 24.90,
-        "img": "./webp/03.webp",
-        "category": "sweat"
+        "price": "24.90",
+        "img": "./webp/10.webp",
+        "category": "Sweat"
     },
     {
         "id": "PRD004",
         "name": "T-Shirt United Blanc",
         "description": "Unnissons-nous avec notre collection United ! 20% Polyester, 80% Coton",
-        "price": 24.90,
+        "price": "24.90",
         "img": "./webp/04.webp",
+        "category": "T-Shirt"
+    },
+    {
+        "id": "PRD005",
+        "name": "Sweat Highlight",
+        "description": "Eclairez votre univers avec Highlight ! 10% Polyester, 90% Coton",
+        "price": "28.40",
+        "img": "./webp/05.webp",
+        "category": "Sweat"
+    },
+    {
+        "id": "PRD006",
+        "name": "T-Shirt InTheDark",
+        "description": "Sortez dans l'ombre avec notre t-shirt InTheDark ! 10% Polyester, 90% Coton",
+        "price": "27.00",
+        "img": "./webp/07.webp",
         "category": "T-Shirt"
     }
 
