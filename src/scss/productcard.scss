@@ -68,4 +68,24 @@
       }
     }
   }
+
+  .cartbutton {
+    display: flex;
+    background-color: var(--color-purple);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.8rem;
+    border: none;
+    outline: none;
+    text-align: center;
+    justify-content: center;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-white);
+    transition: transform 0.15s ease-in-out;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
 }

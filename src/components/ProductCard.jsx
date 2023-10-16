@@ -22,7 +22,7 @@ export default function ProductCard({ data, updateCart}) {
             <p className="description">{data.description}</p>
             <p className="price">{data.price.toFixed(2)} €</p>
           </div>
-          <button onClick={() => updateCart(data.price)}>Ajouter</button>
+          <button className="cartbutton" onClick={() => updateCart(data.price)}>Ajouter au panier</button>
         </div>
       </div>
     </div>
