@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "linkname": "accueil",
+    "linkurl": "/"
+    
+  },
+  {
+    "id": 2,
+    "linkname": "a propos",
+    "linkurl": "/seances"
+    
+  },
+  {
+    "id": 3,
+    "linkname": "list",
+    "linkurl": "/contact"
+  
+  }
+]
