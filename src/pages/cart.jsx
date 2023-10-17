@@ -3,7 +3,7 @@
 import "../scss/cart.scss";
 
 
-export default function Cart({ globalCart, setGlobalCart}) {
+export default function Cart({ globalCart, count, globalRecap}) {
     const imgsrc = {
         backgroundImage: `url(${globalCart.img})`,
       };
@@ -28,8 +28,17 @@ export default function Cart({ globalCart, setGlobalCart}) {
                 ))}
                 </div>
                 <div className="Recap">
-                    
-
+                    <p className="title">Panier</p>
+                    <div className="section">
+                    <p className="subtitle">Montant globale</p>
+                    <p className="price">{globalRecap.toFixed(2)} €</p>
+                    </div>
+                    <div className="section">
+                    <p className="subtitle">Nombre d'article</p>
+                    <p className="price">{count}</p>
+                    </div>
+                    <button className="btn carte">Payer par carte</button>
+                    <button className="btn paypal">Payer avec Paypal</button>
                 </div>
 
             </div>
