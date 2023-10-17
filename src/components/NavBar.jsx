@@ -1,6 +1,6 @@
 //Librairies
 import navbardata from "../data/linknavbar.json";
-import { NavLink as Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 //Composants
 import Burger from "./Burger.jsx";
@@ -21,7 +21,7 @@ export default function Navbar({ cart, count,}) {
           {navbardata.map((navdataIndex) => {
             return (
               <li key={navdataIndex.id} className="link">
-                <a href={navdataIndex.linkurl}>{navdataIndex.linkname}</a>
+                <Link to={navdataIndex.linkurl}>{navdataIndex.linkname}</Link>
               </li>
             );
           })}
