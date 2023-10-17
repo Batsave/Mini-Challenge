@@ -11,7 +11,7 @@ import "../scss/root.scss";
 
 
 
-export default function Navbar({ cart, count }) {
+export default function Navbar({ cart, count,}) {
 
   return (
     <nav className="navbar">
