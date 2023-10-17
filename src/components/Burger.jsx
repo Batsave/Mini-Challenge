@@ -1,6 +1,8 @@
 import navbardata from "../data/linknavbar.json";
 import "../scss/navbar.scss";
 import "../scss/root.scss";
+import { HashLink as Link } from "react-router-hash-link";
+
 
 export default function Burger() {
     return (
@@ -15,8 +17,8 @@ export default function Burger() {
           {navbardata.map((navdataIndex) => {
             return (
               <li key={navdataIndex.id} className="link"  >
-                <a href={navdataIndex.linkurl} 
-                >{navdataIndex.linkname}</a>
+                <Link href={navdataIndex.linkurl} 
+                >{navdataIndex.linkname}</Link>
               </li>
             );
           })}
