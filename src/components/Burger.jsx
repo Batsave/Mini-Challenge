@@ -17,7 +17,7 @@ export default function Burger() {
           {navbardata.map((navdataIndex) => {
             return (
               <li key={navdataIndex.id} className="link"  >
-                <Link href={navdataIndex.linkurl} 
+                <Link to={navdataIndex.linkurl} 
                 >{navdataIndex.linkname}</Link>
               </li>
             );
