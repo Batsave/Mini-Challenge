@@ -30,11 +30,11 @@ export default function Cart({ globalCart, count, globalRecap}) {
                 <div className="Recap">
                     <p className="title">Panier</p>
                     <div className="section">
-                    <p className="subtitle">Montant globale</p>
+                    <p className="subtitle">Montant global</p>
                     <p className="price">{globalRecap.toFixed(2)} €</p>
                     </div>
                     <div className="section">
-                    <p className="subtitle">Nombre d'article</p>
+                    <p className="subtitle">Nombre(s) d'article(s)</p>
                     <p className="price">{count}</p>
                     </div>
                     <button className="btn carte">Payer par carte</button>
