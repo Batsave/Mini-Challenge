@@ -1,12 +1,13 @@
 import "../scss/productcard.scss";
+import { useState } from "react";
+
+
 
 export default function ProductCard({ data, updateCart}) {
   const imgsrc = {
     backgroundImage: `url(${data.img})`,
   };
-
-
-
+let [count, setCount] = useState(0);
 
   return (
     <div>
@@ -22,9 +23,10 @@ export default function ProductCard({ data, updateCart}) {
             <p className="description">{data.description}</p>
             <p className="price">{data.price.toFixed(2)} €</p>
           </div>
-          <button className="cartbutton" onClick={() => updateCart(data.price)}>Ajouter au panier</button>
+          <button className="cartbutton" onClick={() => updateCart(data) & setCount(count + 1 )}>Ajouter au panier</button>
         </div>
       </div>
     </div>
   );
+  
 }

@@ -1,0 +1,128 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 100px 0 50px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.productList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+
+  .product {
+    display: flex;
+    gap: 1rem;
+    width: auto;
+    padding: 1rem;
+    align-items: center;
+    border-bottom: solid 1px var(--color-separator);
+
+    .product-img {
+      width: 150px;
+      height: 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0.2rem;
+    }
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+      font-family: var(--font);
+
+      .name {
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+      .id {
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+      .price {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.Recap {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    min-width: 220px;
+    height: auto;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    gap: 1rem;
+    box-sizing: border-box;
+    background-color: var(--color-white);
+
+    .title {
+        font-family: var(--font);
+        font-size: 1.6rem;
+        font-weight: 700;
+        
+        text-align: center;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        
+
+        .subtitle {
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 300;
+            
+        }
+        .price {
+            
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 700;
+            
+        }
+
+    }
+  .btn {
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-family: var(--font);
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0.4rem #10101040;
+
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: 0rem 0rem 0.2rem #10101040;
+    }
+    
+  }  
+  .carte {
+    background-color: var(--color-white-hover);
+    color: var(--color-black);
+}
+.paypal {
+    background-color: #003088;
+    color: var(--color-white);
+}
+}

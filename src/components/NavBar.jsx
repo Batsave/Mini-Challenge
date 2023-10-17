@@ -1,9 +1,17 @@
+//Librairies
 import navbardata from "../data/linknavbar.json";
-import "../scss/navbar.scss";
-import "../scss/root.scss";
+import { HashLink as Link } from "react-router-hash-link";
+
+//Composants
 import Burger from "./Burger.jsx";
 
-export default function Navbar({ cart, count }) {
+// Styles
+import "../scss/navbar.scss";
+import "../scss/root.scss";
+
+
+
+export default function Navbar({ cart, count,}) {
 
   return (
     <nav className="navbar">
@@ -13,14 +21,14 @@ export default function Navbar({ cart, count }) {
           {navbardata.map((navdataIndex) => {
             return (
               <li key={navdataIndex.id} className="link">
-                <a href={navdataIndex.linkurl}>{navdataIndex.linkname}</a>
+                <Link to={navdataIndex.linkurl}>{navdataIndex.linkname}</Link>
               </li>
             );
           })}
         </ul>
         <div className="cart-section">
         <p className="cart-price">{cart.toFixed(2)} € ({count})</p>
-          <div className="cart"></div>
+          <Link to="/cart" className="cart" ></Link>
           
         </div>
       
